@@ -1,7 +1,7 @@
 package com.example.aop.abc;
 
 public interface Member {
-    public void doSomething() ;
+    public void doSomething2() ;
 
-    public void doSomethingElse() ;
+    public void doSomethingElse2() ;
 }

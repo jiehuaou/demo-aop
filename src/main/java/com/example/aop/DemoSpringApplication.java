@@ -43,6 +43,7 @@ public class DemoSpringApplication implements CommandLineRunner{
 //		Application app = new Application();
 		app.doSomething();
 		app.doSomethingElse();
+		app.hello();
 
 		System.out.println("-----------------------------");
 //		mem.doSomething();

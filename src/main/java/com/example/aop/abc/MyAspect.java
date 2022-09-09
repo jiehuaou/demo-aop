@@ -6,13 +6,12 @@ import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
 
 /**
- * advice on Custom Annotation
+ * Creating Our Aspect with advice on Custom Annotation
  */
 
 @Aspect
 @Component
 public class MyAspect {
-
 
     @Before("execution(* com.example.aop.abc..*(..)) && @target(com.example.aop.abc.MyAnnotation)")
     public void adviceTarget(JoinPoint thisJoinPoint) {

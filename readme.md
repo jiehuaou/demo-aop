@@ -1,4 +1,6 @@
 
+![aop1 info](./images/aop1.png "aop1")
+
 # Aspect
 
 This is a module which has a set of APIs providing cross-cutting requirements.
@@ -19,9 +21,13 @@ This is a module which has a set of APIs providing cross-cutting requirements.
 
 allows you to introduce *new interfaces (and a corresponding implementation) to any advised object*.
 
-# Target object
+# Target Object
 
-*The object being advised by one or more aspects*. This object will always be a **proxied object**, also referred to as the advised object.
+Target Object is the Object on which an Aspect applies the Advice. We can also call it Advised Object.
+
+# AOP Proxy
+
+For each of the target objects, Spring AOP creates proxy classes. Thus, when we auto-wire a Target Object, Spring injects the proxy for that Object.
 
 # Weaving
 

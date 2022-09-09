@@ -2,6 +2,10 @@ package com.example.aop.abc;
 
 import org.springframework.stereotype.Component;
 
+/**
+ * advice will be exectued on methods of this class with Custom Annotation,
+ */
+
 @MyAnnotation
 @Component
 public class Application {
@@ -20,5 +24,9 @@ public class Application {
     public void doSomethingElse() {
         System.out.println("Doing something else");
         staticMember = 22;
+    }
+
+    public void hello() {
+        System.out.println("Doing hello");
     }
 }
