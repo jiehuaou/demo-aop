@@ -24,6 +24,22 @@ This is a module which has a set of APIs providing cross-cutting requirements.
 
 allows you to introduce *new interfaces (and a corresponding implementation) to any advised object*.
 
+introduce an interface (Address) onto an existing bean (Customer) without changing the bean’s source code. 
+```java
+@Component
+@Aspect
+public class AddressAspect {
+    @DeclareParents(value="com.example.aop.Customer+", defaultImpl=AddressImpl.class)
+    public Address Address;
+}
+///////
+    @Autowired()
+	Customer customer;
+    ...
+    Address addr = (Address) customer;
+	addr.showDetail();
+```
+
 ## Target Object
 
 Target Object is the Object on which an Aspect applies the Advice. We can also call it Advised Object.
